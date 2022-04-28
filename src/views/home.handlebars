@@ -1,27 +1,36 @@
-<h1>ESTO ES EL HOME</h1>
+{{>navbar}}
+
+<div>
+  <a class="btn btn-primary" href="create">Add</a>
+</div>
+
 
 <div id="list">
-    <table class="table table-sm table-hover">
-        <thead>
-            <tr>
-                <th>Teams</th>
-            </tr>
-        </thead>
-        <tbody>
-            {{#each equipos }}
+  <table class="table table-sm table-hover caption-top">
+    <caption>Total teams: {{teams.length}}</caption>
+    <thead>
+      <tr>
+        <th>Name team</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each teams }}
 
-            <tr>
-                <td>
-                    <img class="" src={{this.crestUrl}} alt="">
-                    <a href="#" class="mx-1">{{this.name}}</a>
-                </td>
-                <td class="d-flex justify-content-end align-items-center">
-                    <a href="#" class="btn btn-danger btn-sm mx-1">Delet</a>
-                    <a href="#" class="btn btn-warning btn-sm mx-1">Edit</a>
-                </td>
-            </tr>
+      <tr>
+        <td>
+          <img class="shield" src={{this.crestUrl}} alt="">
+          <a href="/club/{{this.tla}}" class="mx-1">{{this.name}}</a>
+        </td>
+        <td class="d-flex justify-content-end align-items-center">
+          <a href="delete/{{this.tla}}" class="btn btn-danger btn-sm mx-1">Delet</a>
+          <a href="edit/{{this.tla}}" class="btn btn-warning btn-sm mx-1">Edit</a>
+        </td>
+      </tr>
 
-            {{/each}}
-        </tbody>
-    </table>
+      {{/each}}
+    </tbody>
+  </table>
 </div>
+
+
+

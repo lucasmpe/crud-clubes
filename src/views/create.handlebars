@@ -1,0 +1,16 @@
+{{>navbar}}
+
+{{#if data.message}}
+
+<p>{{data.message}}</p>
+
+<div>
+  <a class="btn btn-success" href="../club/{{data.tlaNewTeam}}">View</a>
+  <a class="btn btn-primary" href="create">Add Other</a>
+</div>
+
+{{else}}
+
+{{>form}}
+
+{{/if}}

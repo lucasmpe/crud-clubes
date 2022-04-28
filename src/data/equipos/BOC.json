@@ -1,0 +1,14 @@
+{
+    "name": "Boca Juniors",
+    "country": "Argentina",
+    "founded": "1881",
+    "address": "Coronel Gonzalez",
+    "phone": "11111",
+    "email": "",
+    "website": "https://www.bocajuniors.com.ar/",
+    "venue": "Bombonera",
+    "color1": "#ffffff",
+    "color2": "#ffffff",
+    "tla": "BOC",
+    "crestUrl": "../uploads/imagenes/b39de8a43460f277b724fe98ecbfe1c7"
+}
