@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/club/:tla', (req, res) => {
+  console.log(req.params)
   const data = fs.readFileSync(`./data/equipos/${req.params.tla}.json`);
   const team = JSON.parse(data);
   res.render('club', { team });
@@ -121,7 +122,7 @@ app.get('/edit/:tla', (req, res) => {
   });
 });
 
-app.post('/edit', (req, res) => {
+app.post('/edit', upload.single('shield'), (req, res) => {
 
     /* Toma los datos del form y crea un objeto newTeam */
     console.log(req.body)
