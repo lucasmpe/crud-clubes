@@ -2,76 +2,51 @@
 
 <div id="club" class="container">
 
-  <img class="shield" src={{team.crestUrl}} alt="">
+  <img class="shield" src="{{team.crestUrl}}" alt="">
 
   <table class="table table-sm table-hover caption-top">
     <caption>Info: {{team.name}}</caption>
     <tbody>
-
       <tr>
         <td>Country</td>
         <td>{{team.area.name}}</td>
       </tr>
-
       <tr>
-        <td>Competitions</td>
-        <td>
-          {{#each team.activeCompetitions as |competition|}}
-            {{competition.name}}
-            <br>
-          {{/each}}
-        </td>
+        <td>Club colors</td>
+        <td>{{team.clubColors}}</td>
       </tr>
-
       <tr>
         <td>Address</td>
         <td>{{team.address}}</td>
       </tr>
-
       <tr>
         <td>Phone</td>
         <td>{{team.phone}}</td>
       </tr>
-
       <tr>
         <td>Website</td>
         <td><a href="{{team.website}}">{{team.website}}</a></td>
       </tr>
-
       <tr>
         <td>Email</td>
-         <td><a href="{{team.email}}">{{team.email}}</a></td>
+        <td><a href="{{team.email}}">{{team.email}}</a></td>
       </tr>
-
       <tr>
         <td>Founded</td>
         <td>{{team.founded}}</td>
       </tr>
-
       <tr>
         <td>Stadium</td>
         <td>{{team.venue}}</td>
       </tr>
-
-      {{!-- <tr>
-        <td>Squad</td>
-        <td>{{team.squad}}</td>
-      </tr> --}}
-
       <tr>
         <td>Last Updated</td>
         <td>{{team.lastUpdated}}</td>
       </tr>
-
-     
-
     </tbody>
   </table>
-
-<div>
-  <a class="btn btn-danger" href="../delete/{{team.tla}}">Delet</a>
-  <a class="btn btn-warning" href="../edit/{{team.tla}}">Edit</a>
-</div>
-
-
+  <div>
+    <a class="btn btn-danger" href="../delete/{{team.id}}">Delet</a>
+    <a class="btn btn-warning" href="../edit/{{team.id}}">Edit</a>
+  </div>
 </div>

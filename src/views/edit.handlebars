@@ -3,19 +3,15 @@
 {{#if data.message}}
 
 <p>{{data.message}}</p>
-
 <div>
-  <a class="btn btn-success" href="../club/{{data.tlaNewTeam}}">View</a>
+  <a class="btn btn-success" href="../club/{{data.id}}">View</a>
 </div>
 
 {{else}}
 
 <div id="club" class="container">
-
-<img class="shield" src={{data.team.crestUrl}} alt="">
-
-{{>form data = data}}
+  <img class="shield" src="{{team.crestUrl}}" alt="">
+  {{>form team = team}}
 </div>
 
 {{/if}}
-
