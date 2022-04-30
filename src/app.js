@@ -8,7 +8,9 @@ import { dirname } from 'path'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
-const PUERTO = 8080;
+let port = process.env.PORT;
+if (port == null || port == "") port = 8000;
+
 const app = express();
 const hbs = create();
 const upload = multer({ dest: 'uploads/imagenes' });
@@ -161,5 +163,5 @@ app.get('/delete/:id', (req, res) => {
   }
 });
 
-app.listen(PUERTO);
-console.log(`Escuchando en http://localhost:${PUERTO}`);
+app.listen(port);
+console.log(`Escuchando en http://localhost:${port}`);
