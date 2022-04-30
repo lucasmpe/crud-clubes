@@ -55,7 +55,7 @@ app.post('/create', upload.single('shield'), (req, res) => {
     const newTeam = {
       id: Math.floor((Math.random() * 2000) + 1000),
       area: {
-        id: Math.floor((Math.random() * 200) + 1),
+        id: '',
         name: req.body.country
       },
       name: req.body.name,
@@ -107,7 +107,7 @@ app.post('/edit/:id', upload.single('shield'), (req, res) => {
     const teamEdited = {
       id: Number(req.params.id),
       area: {
-        id: Math.floor((Math.random() * 200) + 1),
+        id: '',
         name: req.body.country
       },
       name: req.body.name,
